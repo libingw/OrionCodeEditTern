@@ -14280,7 +14280,7 @@ define('embeddedEditor/helper/embeddedFileImpl',["orion/Deferred", 'embeddedEdit
 				file.LocalTimeStamp = Date.now();
 				file.contents = contents;
 			}
-			return new Deferred().resolve(contents);
+			return this.read(fLocation, true);
 		},
 		/**
 		 * Deletes a file, directory, or project.
